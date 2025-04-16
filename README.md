@@ -26,3 +26,58 @@ OpenBook este un dispozitiv de tip e-book reader cu sursă deschisă, proiectat 
 | CC0402                 | Capacitor                            | [Link](https://componentsearchengine.com/part-view/CC0402MRX5R5BB106/YAGEO) |
 | RR0402                 | Resistor                             | [Link](https://www.snapeda.com/parts/RC0402FR-07226RL/Yageo/view-part/) |
 
+Dispozitivul suportă mai multe surse de alimentare:
+
+- **USB-C**: Alimentare și comunicare prin conectorul `USB4110-GF-A`, cu protecție ESD (`USBLC6-2SC6Y`)
+- **Baterie Li-Po**: Încărcată prin controlerul `MCP73831`, cu indicator de stare LED
+- **Backup cu supercondensator**: `CPH3225A` menține alimentarea ceasului RTC în caz de pierdere de curent
+
+**Calea de alimentare include:**
+
+- `XC6220A331MR-G` – LDO care furnizează 3.3V stabil pentru sistem
+- `MAX17048G+T10` – Fuel gauge pentru monitorizarea capacității bateriei
+- `DMG2305UX-7` – MOSFET P-Channel pentru selecția automată a sursei de alimentare
+- `MBR0530` – Diodă Schottky pentru protecție la tensiuni inverse
+
+---
+
+## Procesare & Memorie
+
+- `ESP32-C6-WROOM-1-N8` – Microcontroller principal cu suport pentru Wi-Fi 6, Bluetooth 5 și Zigbee 3.0
+- `W25Q512JVEIQ` – Memorie Flash SPI externă de 512Mb pentru stocare extinsă
+- **Slot microSD** – Permite extinderea stocării pentru datele utilizatorului
+
+---
+
+## Sistem de Afișare
+
+- **Display E-Ink de 7.5"** – Interfațat prin SPI, ideal pentru consum redus
+- **Stabilitate și alimentare** – Condensatori pentru stabilizarea tensiunii și impulsurilor de comutare necesare ecranului
+
+---
+
+## Senzori & Ceas
+
+- `BME680` – Senzor ambiental I²C ce măsoară:
+  - Temperatură: -40°C până la +85°C  
+  - Umiditate: 0–100% RH  
+  - Presiune: 300–1100 hPa  
+  - Calitatea aerului (rezistență la gaze)
+- `DS3231SN` – Ceas în timp real I²C cu compensare termică, foarte precis
+
+---
+
+## Conectivitate & Interfețe
+
+- **USB-C** – Pentru alimentare, încărcare și comunicare de date
+- **Qwiic / STEMMA QT** – Conector I²C rapid pentru extensii externe (senzori, periferice)
+- **I²C & SPI** – Utilizate pentru senzori și memorie
+- **Mod Deep Sleep** – ESP32 intră în standby (~20 µA) pentru autonomie crescută
+
+---
+
+## Interfață Utilizator
+
+- **Buton Reset** – Repornește dispozitivul
+- **Buton Boot** – Permite accesul în modul bootloader pentru programare
+- **Buton Change** – Poate fi folosit pentru interacțiuni cu conținutul afișat
