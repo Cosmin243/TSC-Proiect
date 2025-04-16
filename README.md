@@ -74,3 +74,27 @@ Dispozitivul suportă mai multe surse de alimentare:
 - **Buton Reset** – Repornește dispozitivul
 - **Buton Boot** – Permite accesul în modul bootloader pentru programare
 - **Buton Change** – Poate fi folosit pentru interacțiuni cu conținutul afișat
+
+# 🧷 Pini ESP32-C6
+
+| GPIO  | Componentă       |
+|-------|------------------|
+| IO9   | Boot Button      |
+| IO2   | SD Card          |
+| IO4   | SD Card          |
+| IO21  | I2C Shared       |
+| IO6   | SPI Shared       |
+| IO22  | I2C Shared       |
+| IO7   | SPI Shared       |
+| IO0   | RTC              |
+| IO13  | USB Interface    |
+| IO19  | MAX17048         |
+| IO11  | NOR Flash        |
+| IO12  | USB Interface    |
+| IO1   | RTC              |
+| IO8   | GPIO             |
+| IO15  | Buton Change     |
+| IO18  | RTC              |
+| IO17  | UART             |
+| IO16  | UART             |
+| EN    | Buton Reset      |
