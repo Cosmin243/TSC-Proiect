@@ -49,13 +49,6 @@ Dispozitivul suportă mai multe surse de alimentare:
 
 ---
 
-## Sistem de Afișare
-
-- **Display E-Ink de 7.5"** – Interfațat prin SPI, ideal pentru consum redus
-- **Stabilitate și alimentare** – Condensatori pentru stabilizarea tensiunii și impulsurilor de comutare necesare ecranului
-
----
-
 ## Senzori & Ceas
 
 - `BME680` – Senzor ambiental I²C ce măsoară:
